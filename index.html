@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlixClick</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>FlixClick</h1>
+        
+        <!-- Media Type Selection -->
+        <label for="mediaType">Choose Media Type:</label>
+        <select id="mediaType" onchange="toggleInputs()">
+            <option value="">Select</option>
+            <option value="movie">Movie</option>
+            <option value="tvshow">TV Show</option>
+        </select>
+
+        <!-- Movie Input -->
+        <div id="movieInput" style="display: none;">
+            <h2>Enter Movie Code</h2>
+            <input type="text" id="movieCode" placeholder="Enter movie code">
+        </div>
+
+        <!-- TV Show Input -->
+        <div id="tvShowInput" style="display: none;">
+            <h2>Enter TV Show Details</h2>
+            <input type="text" id="tvShowId" placeholder="Enter TV show ID">
+            <input type="text" id="seasonNumber" placeholder="Enter season number">
+            <input type="text" id="episodeNumber" placeholder="Enter episode number">
+        </div>
+
+        <!-- Load Button -->
+        <button onclick="loadMedia()">Load Media</button>
+
+        <!-- Video Container -->
+        <div class="video-container" id="videoContainer">
+            <iframe id="mediaIframe" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
